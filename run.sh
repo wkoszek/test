@@ -12,6 +12,10 @@ if [ $? -eq 0 ]; then
 	. ./env-set
 	chmod 600 deploy
 	ssh-add deploy
+
+	git config --global user.email "travis@koszek.com"
+	git config --global user.name "Travis"
+
 	mkdir tmp
 	cd tmp
 	git clone git@github.com:wkoszek/test.git
