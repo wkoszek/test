@@ -8,8 +8,8 @@ set -x
 ) > output.html
 
 if [ $? -eq 0 ]; then
-	sh -i -c ssh-agent > _
-	. _
+	sh -i -c ssh-agent > env-set
+	. ./env-set
 	mkdir tmp
 	cd tmp
 	git clone git@github.com:wkoszek/test.git
