@@ -23,7 +23,7 @@ if [ $? -eq 0 ]; then
 
 	BRANCH=$RANDOM
 
-	git checkout -B $BRANCH
+	git checkout $BRANCH
 	git branch --set-upstream-to origin/$BRANCH
 
 	mv ../../output.html .
