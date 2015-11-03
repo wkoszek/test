@@ -21,7 +21,7 @@ if [ $? -eq 0 ]; then
 	git clone git@github.com:wkoszek/test.git
 	cd test
 
-	BRANCH=bubu
+	BRANCH=`date +%Y%m%h-%H%M`
 
 	git checkout $BRANCH
 	git branch --set-upstream-to origin/$BRANCH
@@ -30,5 +30,5 @@ if [ $? -eq 0 ]; then
 
 	git add output.html
 	git commit -m "New stuff `date`" output.html
-	git push origin gh-pages
+	git push origin $BRANCH
 fi
