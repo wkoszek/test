@@ -9,7 +9,7 @@ set -x
 
 if [ $? -eq 0 ]; then
 	sh -i -c ssh-agent > _
-	source _
+	. _
 	mkdir tmp
 	cd tmp
 	git clone git@github.com:wkoszek/test.git
