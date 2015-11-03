@@ -20,8 +20,11 @@ if [ $? -eq 0 ]; then
 	cd tmp
 	git clone git@github.com:wkoszek/test.git
 	cd test
-	git checkout -B gh-pages
-	git branch --set-upstream-to origin/gh-pages
+
+	BRANCH=$RANDOM
+
+	git checkout -B $BRANCH
+	git branch --set-upstream-to origin/$BRANCH
 
 	mv ../../output.html .
 
