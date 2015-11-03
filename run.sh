@@ -21,7 +21,7 @@ if [ $? -eq 0 ]; then
 	git clone git@github.com:wkoszek/test.git
 	cd test
 
-	BRANCH=$RANDOM
+	BRANCH=bubu
 
 	git checkout $BRANCH
 	git branch --set-upstream-to origin/$BRANCH
