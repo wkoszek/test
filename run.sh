@@ -13,6 +13,7 @@ if [ $? -eq 0 ]; then
 	chmod 600 deploy
 	ssh-add deploy
 
+	git config --global push.default simple
 	git config --global user.email "travis@koszek.com"
 	git config --global user.name "Travis"
 
