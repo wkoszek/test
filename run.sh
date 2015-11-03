@@ -10,6 +10,7 @@ set -x
 if [ $? -eq 0 ]; then
 	sh -i -c ssh-agent > env-set
 	. ./env-set
+	chmod 600 deploy
 	ssh-add deploy
 	mkdir tmp
 	cd tmp
